@@ -5,6 +5,7 @@ import re
 import win32clipboard
 import time
 
+
 #------------------------------------------------------------------------
 # Vim style editing
 #
