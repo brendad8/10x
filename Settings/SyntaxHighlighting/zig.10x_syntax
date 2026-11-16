@@ -25,6 +25,7 @@ REGEX(L?"[^"\\]*(?:\\.[^"\\]*)*")
 REGEX(L?'[^'\\]*(?:\\.[^'\\]*)*')
 
 Language.Preprocessor:
+REGEX(@[a-zA-Z_]\w*(?=\s*\())
 WORD(@import)
 
 Language.Number:
@@ -64,6 +65,9 @@ WORD(switch)
 WORD(try)
 WORD(catch)
 WORD(orelse)
+WORD(while)
+WORD(continue)
+WORD(break)
 WORD(void)
 WORD(i8)
 WORD(u8)
