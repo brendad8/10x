@@ -60,25 +60,15 @@ Command handler for commandline mode, e.g. :q, :w, etc.
 """
 def UserHandleCommandline(command) -> UserHandledResult:
 
-    #
-    # Testing/Examples
-    #
-    do_test = False
-    if do_test:
-        # Testing - print current filename.
-        if command == ":filename":
-            print(N10X.Editor.GetCurrentFilename())
-            return UserHandledResult.HANDLED
-        
-        # Testing - print Hello World
-        if command == ":hello":
-            print("Hello World")
-            return UserHandledResult.HANDLED
-
-    #
-    # Add own commands below
-    #
-
+    if command == ":filename":
+        print(N10X.Editor.GetCurrentFilename())
+        return UserHandledResult.HANDLED
+    elif command == ":hello":
+        print("Hello World")
+        return UserHandledResult.HANDLED
+    elif command[0] == ":":
+        N10X.Editor.ExecuteCommand(command[1:])
+        return UserHandledResult.HANDLED
 
     # Default - do nothing
     return UserHandledResult.UNHANDLED

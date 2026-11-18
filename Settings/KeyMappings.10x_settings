@@ -258,6 +258,7 @@ Control Shift W:             ToggleWhitespace
 
 # Jump to the definition of the current symbol
 Alt G:                       GotoSymbolDefinition
+Alt K:                       GotoSymbolDefinition
 
 # Jump to the definition of the symbol at the mouse position
 MouseMiddleButton:           GotoSymbolDefinitionUnderMouse

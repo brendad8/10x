@@ -2946,7 +2946,7 @@ def HandleCommandModeChar(char):
     elif c == ":":
         if g_Use10xCommandPanel:
             N10X.Editor.ExecuteCommand("ShowCommandPanel")
-            # N10X.Editor.SetCommandPanelText(":")
+            N10X.Editor.SetCommandPanelText(":")
         else:
             EnterCommandlineMode(c)
 
